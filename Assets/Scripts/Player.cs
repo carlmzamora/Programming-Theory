@@ -5,6 +5,8 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     [SerializeField] private float moveSpeed;
+    [SerializeField] private Transform spawnPt;
+    [SerializeField] private GameObject bulletPrefab;
     private Rigidbody rb;
 
     void Start()
@@ -16,6 +18,11 @@ public class Player : MonoBehaviour
     void Update()
     {
         Move();
+
+        if(Input.GetMouseButtonDown(0))
+        {
+            Shoot();
+        }
     }
 
     void Move()
@@ -37,5 +44,10 @@ public class Player : MonoBehaviour
             Vector3 pointToLook = mouseRay.GetPoint(rayLength);
             transform.LookAt(new Vector3(pointToLook.x, transform.position.y, pointToLook.z));
         }
+    }
+
+    void Shoot()
+    {
+        Instantiate(bulletPrefab, spawnPt.position, spawnPt.transform.rotation);
     }
 }
