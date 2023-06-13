@@ -9,7 +9,7 @@ public class Player : MonoBehaviour
     [SerializeField] private GameObject baseBulletPrefab;
     private Rigidbody rb;
 
-    public GameObject activeBulletPrefab;
+    [HideInInspector] public GameObject activeBulletPrefab;
 
     public static Player Instance { get; private set; }
     void Start()

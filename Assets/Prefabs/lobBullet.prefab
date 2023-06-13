@@ -13,9 +13,9 @@ GameObject:
   - component: {fileID: 7284770183519676050}
   - component: {fileID: 4952135313538016176}
   - component: {fileID: 2368564809392005288}
-  - component: {fileID: 1205445751489663216}
-  m_Layer: 0
-  m_Name: fastBullet
+  - component: {fileID: 8586925684889003337}
+  m_Layer: 7
+  m_Name: lobBullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -115,7 +115,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &1205445751489663216
+--- !u!114 &8586925684889003337
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -124,8 +124,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 5627777944502179534}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: efdbcead53659964c9d64a088a159577, type: 3}
+  m_Script: {fileID: 11500000, guid: a0c6f000bbbd3d14590e79f904a7495f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  projectileSpeed: 2000
-  lifetime: 2
