@@ -6,12 +6,17 @@ public class Player : MonoBehaviour
 {
     [SerializeField] private float moveSpeed;
     [SerializeField] private Transform spawnPt;
-    [SerializeField] private GameObject bulletPrefab;
+    [SerializeField] private GameObject baseBulletPrefab;
     private Rigidbody rb;
 
+    public GameObject activeBulletPrefab;
+
+    public static Player Instance { get; private set; }
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+        Instance = this;
+        activeBulletPrefab = baseBulletPrefab;
     }
 
     // Update is called once per frame
@@ -48,6 +53,6 @@ public class Player : MonoBehaviour
 
     void Shoot()
     {
-        Instantiate(bulletPrefab, spawnPt.position, spawnPt.transform.rotation);
+        Instantiate(activeBulletPrefab, spawnPt.position, spawnPt.transform.rotation);
     }
 }
