@@ -4,15 +4,15 @@ using UnityEngine;
 
 public class BaseEnemy : MonoBehaviour
 {
-    float moveRange = 10;
-    float moveInterval = 1.5f;
+    protected float moveRange = 10;
+    protected float moveInterval = 1.5f;
 
-    void Start()
+    protected virtual void Start()
     {
         StartCoroutine(Move());
     }
 
-    IEnumerator Move()
+    protected virtual IEnumerator Move()
     {
         while(true)
         {
