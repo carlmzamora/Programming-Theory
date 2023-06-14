@@ -23,14 +23,16 @@ public class Switch : MonoBehaviour
         }
     }
 
-    void OnTriggerEnter()
+    void OnTriggerEnter(Collider col)
     {
+        if(!col.gameObject.CompareTag("Player")) return;
         uiPopUp.SetActive(true);
         inRange = true;
     }
     
-    void OnTriggerExit()
+    void OnTriggerExit(Collider col)
     {
+        if(!col.gameObject.CompareTag("Player")) return;
         uiPopUp.SetActive(false);
         inRange = false;
     }
