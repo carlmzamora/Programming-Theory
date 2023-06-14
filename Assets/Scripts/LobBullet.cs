@@ -9,6 +9,7 @@ public class LobBullet : BaseBullet
     {
         projectileSpeed = 400;
         lifetime = 4;
+        damage = 25;
 
         Vector3 direction = (transform.forward + transform.up).normalized;
         rb.useGravity = true;        

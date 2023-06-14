@@ -22,4 +22,19 @@ public class BaseEnemy : MonoBehaviour
             transform.Translate(-transform.right * moveRange);
         }        
     }
+
+    void OnCollisionEnter(Collision col)
+    {
+        if(col.gameObject.CompareTag("Bullet"))
+        {
+            GameObject bulletGO = col.gameObject;
+            Destroy(bulletGO);
+            TakeDamage(bulletGO.GetComponent<BaseBullet>().Damage);
+        }
+    }
+
+    void TakeDamage(int amount)
+    {
+        Debug.Log(amount);
+    }
 }

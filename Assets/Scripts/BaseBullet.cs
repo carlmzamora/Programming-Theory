@@ -6,9 +6,11 @@ public class BaseBullet : MonoBehaviour
 {
     protected float projectileSpeed;
     protected float lifetime;
+    protected int damage;
 
     protected Rigidbody rb;
 
+    public int Damage {get {return damage;}}
     void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -21,6 +23,7 @@ public class BaseBullet : MonoBehaviour
     {
         projectileSpeed = 1000;
         lifetime = 2;
+        damage = 10;
 
         rb.AddForce(transform.forward * projectileSpeed);
     }

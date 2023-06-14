@@ -9,6 +9,7 @@ public class SlowBullet : BaseBullet
     {
         projectileSpeed = 250;
         lifetime = 5;
+        damage = 50;
 
         rb.AddForce(transform.forward * projectileSpeed);
     }

@@ -13,6 +13,7 @@ public class ClusterBullet : LobBullet
         if(isSubBullet)
         {
             rb.AddForce(((Quaternion.Euler(0, Random.Range(0, 360), 0) * transform.forward) + transform.up).normalized * 100);
+            damage = 10;
         }
     }
 
