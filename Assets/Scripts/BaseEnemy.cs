@@ -5,6 +5,7 @@ using TMPro;
 
 public class BaseEnemy : MonoBehaviour
 {
+    //ENCAPSULATION
     [SerializeField] private GameObject hitTextUI;
     private GameObject descTextGO;
     private TextMeshProUGUI descText;

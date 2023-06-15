@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class BaseBullet : MonoBehaviour
 {
+    //ENCAPSULATION
     protected float projectileSpeed;
     protected float lifetime;
     protected int damage;

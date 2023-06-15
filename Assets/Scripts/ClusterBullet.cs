@@ -2,11 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ClusterBullet : LobBullet
+public class ClusterBullet : LobBullet //POLYMORPHISM
 {
     private bool isSubBullet = false;
 
-    protected override void SetProperties()
+    protected override void SetProperties() //INHERITANCE
     {
         base.SetProperties();
 

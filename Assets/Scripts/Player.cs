@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+    //ENCAPSULATION
     [SerializeField] private float moveSpeed;
     [SerializeField] private Transform spawnPt;
     [SerializeField] private GameObject baseBulletPrefab;
@@ -22,11 +23,11 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Move();
+        Move(); //ABSTRACTION
 
         if(Input.GetMouseButtonDown(0))
         {
-            Shoot();
+            Shoot(); //ABSTRACTION
         }
     }
 

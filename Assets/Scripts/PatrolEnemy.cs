@@ -2,11 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PatrolEnemy : BaseEnemy
+public class PatrolEnemy : BaseEnemy //POLYMORPHISM
 {
     private Rigidbody rb;
 
-    protected override void Start()
+    protected override void Start() //INHERITANCE
     {
         rb = GetComponent<Rigidbody>();
 
@@ -14,7 +14,7 @@ public class PatrolEnemy : BaseEnemy
         desc = "PatrolEnemy inherits BaseEnemy.";
     }
 
-    protected override IEnumerator Move()
+    protected override IEnumerator Move() //INHERITANCE
     {
         float timer = 0f;
         while(true)
