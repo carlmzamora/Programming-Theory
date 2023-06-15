@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class BaseEnemy : MonoBehaviour
 {
+    [SerializeField] private GameObject hitTextUI;
+
     protected float moveRange = 10;
     protected float moveInterval = 1.5f;
 
@@ -29,12 +31,13 @@ public class BaseEnemy : MonoBehaviour
         {
             GameObject bulletGO = col.gameObject;
             Destroy(bulletGO);
-            TakeDamage(bulletGO.GetComponent<BaseBullet>().Damage);
+            TakeDamage(bulletGO.GetComponent<BaseBullet>().Damage, col.GetContact(0).point);
         }
     }
 
-    void TakeDamage(int amount)
+    void TakeDamage(int amount, Vector3 collisionPt)
     {
-        Debug.Log(amount);
+        HitTextUI text = Instantiate(hitTextUI, collisionPt, hitTextUI.transform.rotation).GetComponent<HitTextUI>();
+        text.SetAmount((-amount).ToString());
     }
 }

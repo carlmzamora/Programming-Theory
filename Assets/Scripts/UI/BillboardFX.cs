@@ -10,6 +10,7 @@ public class BillboardFX : MonoBehaviour
 
     void Start()
     {
+        if(camTransform == null) camTransform = Camera.main.transform;
         originalRotation = transform.rotation;
     }
 
