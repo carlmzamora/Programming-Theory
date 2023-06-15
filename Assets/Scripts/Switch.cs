@@ -36,17 +36,17 @@ public class Switch : MonoBehaviour
         {
             string desc = "Shoot BaseBullet that inherits MonoBehaviour.";
 
-            if(bulletPrefabToUse.GetComponent<LobBullet>() != null)
+            if(bulletPrefabToUse.GetComponent<ClusterBullet>() != null)
+            {
+                desc = "Shoot Cluster that inherits LobBullet.";
+            }
+            else if(bulletPrefabToUse.GetComponent<LobBullet>() != null)
             {
                 desc = "Shoot LobBullet that inherits BaseBullet.";
             }
             else if(bulletPrefabToUse.GetComponent<SlowBullet>() != null)
             {
                 desc = "Shoot SlowBullet that inherits BaseBullet.";
-            }
-            else if(bulletPrefabToUse.GetComponent<ClusterBullet>() != null)
-            {
-                desc = "Shoot Cluster that inherits LobBullet.";
             }
 
             descText.text = desc;

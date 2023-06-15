@@ -22,7 +22,7 @@ public class PatrolEnemy : BaseEnemy //POLYMORPHISM
             while(timer < 1.5f)
             {
                 timer += Time.deltaTime;
-                rb.AddForce(transform.forward * 800);
+                rb.AddForce(transform.forward * 2500);
                 yield return null;
             }
             timer = 0;
