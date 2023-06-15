@@ -11,6 +11,7 @@ public class PatrolEnemy : BaseEnemy
         rb = GetComponent<Rigidbody>();
 
         base.Start();
+        desc = "PatrolEnemy inherits BaseEnemy.";
     }
 
     protected override IEnumerator Move()

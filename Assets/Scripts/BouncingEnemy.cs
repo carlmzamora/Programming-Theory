@@ -11,6 +11,7 @@ public class BouncingEnemy : BaseEnemy
         rb = GetComponent<Rigidbody>();
 
         base.Start();
+        desc = "BouncingEnemy inherits BaseEnemy.";
     }
 
     protected override IEnumerator Move()

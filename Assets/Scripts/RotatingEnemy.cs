@@ -4,6 +4,12 @@ using UnityEngine;
 
 public class RotatingEnemy : BaseEnemy
 {
+    protected override void Start()
+    {
+        base.Start();
+        desc = "RotatingEnemy inherits BaseEnemy.";
+    }
+
     protected override IEnumerator Move()
     {
         float timer = 0;
